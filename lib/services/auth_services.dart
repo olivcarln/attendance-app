@@ -19,7 +19,7 @@ class AuthServices {
   // auth state changes stream
   Stream<User?> get authStateChanges => _auth.authStateChanges();
 
-  // sign in with email adn password
+  // sign in with email and password
   Future<UserCredential> signInWithEmailAndPassword(
     String email,
     String password,
@@ -33,4 +33,34 @@ class AuthServices {
       rethrow;
     }
   }
+
+  // register with email and password
+  // register with email and password
+  Future<UserCredential> registerWithEmailAndPassword(
+    String email,
+    String password,
+  ) async {
+    try {
+      return await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+    } catch (e) {
+      if (e is FirebaseAuthException) {
+        if (e.code == 'operation=not=allowed') {
+          throw 'Email/Password sign up is not enabled, Please enable on firebase console.';
+        }
+      }
+      rethrow;
+    }
+  }
+
+    // sign out
+    Future<void> signOut() async{
+      try {
+        await _auth.signOut();
+      } catch (e) {
+        rethrow;
+      }
+    }
 }
