@@ -22,7 +22,7 @@ class AuthTextField extends StatelessWidget {
         prefixIcon: Icon(icon, color: Colors.blue[600]),
         suffixIcon: suffixIcon,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(12)
         ),
         filled: true,
         fillColor: Colors.grey[50]
