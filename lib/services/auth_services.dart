@@ -35,7 +35,6 @@ class AuthServices {
   }
 
   // register with email and password
-  // register with email and password
   Future<UserCredential> registerWithEmailAndPassword(
     String email,
     String password,

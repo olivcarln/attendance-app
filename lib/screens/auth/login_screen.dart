@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
   final VoidCallback onRegisterTap;
+
   const LoginScreen({super.key, required this.onRegisterTap});
 
   @override
@@ -112,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.login_rounded, size: 20,),
-                              SizedBox(width: 8,),
+                              SizedBox(width: 8),
                               Text(
                                 'Login',
                                 style: TextStyle(
@@ -128,13 +129,15 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-          SizedBox(height: 24,),
+          SizedBox(height: 24),
           TextButton(
             onPressed: widget.onRegisterTap,
             style: TextButton.styleFrom(
               foregroundColor: Colors.white
             ),
-            child: Text("Don't Have An Account? Register"),
+            child: Text(
+              "Don't have an account? Register"
+            ),
           )
         ],
       ),
