@@ -167,6 +167,7 @@ class _photoButton extends StatelessWidget {
       child: CameraButton(
         buttonText: label,
         onImageCaptured: onImageCapture,
+        
       ),
     );
   }
