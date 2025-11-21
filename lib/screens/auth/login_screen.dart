@@ -1,5 +1,5 @@
-import 'package:attendance_app/screens/auth/widgets/auth_text_field.dart';
-import 'package:attendance_app/screens/auth/widgets/gradient_scaffold.dart';
+import 'package:attendance_app/screens/widgets/auth_text_field.dart';
+import 'package:attendance_app/screens/widgets/gradient_scaffold.dart';
 import 'package:attendance_app/services/auth_services.dart';
 import 'package:flutter/material.dart';
 
